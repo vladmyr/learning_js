@@ -51,6 +51,69 @@ describe("application logic", function(){
                 entries: List.of("Sunshine")
             }));
         });
+
+        // tree state - put pair winner back to entries and pick next pair
+        it("puts winner of current vote back to entries", function(){
+            const state = Map({
+                vote: Map({
+                    pair: List.of("Trainspotting", "28 Days Later"),
+                    tally: Map({
+                        "Trainspotting": 4,
+                        "28 Days Later": 2
+                    })
+                }),
+                entries: List.of("Sunshine", "Millions", "127 Hours")
+            });
+            const nextState = next(state);
+
+            expect(nextState).to.equal(Map({
+                vote: Map({
+                    pair: List.of("Sunshine", "Millions")
+                }),
+                entries: List.of("127 Hours", "Trainspotting")
+            }));
+        });
+
+        // tree state - put both voting entries back to pool in case they have equal tally
+        it("puts both from tied vote back to entries", function(){
+            const state = Map({
+                vote: Map({
+                    pair: List.of("Trainspotting", "28 Days Later"),
+                    tally: Map({
+                        "Trainspotting": 3,
+                        "28 Days Later": 3
+                    })
+                }),
+                entries: List.of("Sunshine", "Millions", "127 Hours")
+            });
+            const nextState = next(state);
+
+            expect(nextState).to.equal(Map({
+                vote: Map({
+                    pair: List.of("Sunshine", "Millions")
+                }),
+                entries: List.of("127 Hours", "Trainspotting", "28 Days Later")
+            }));
+        });
+
+        // tree state - choose overall vote winner
+        it("marks winner when just one entry left", function(){
+            const state = Map({
+                vote: Map({
+                    pair: List.of("Trainspotting", "28 Days Later"),
+                    tally: Map({
+                        "Trainspotting": 4,
+                        "28 Days Later": 2
+                    })
+                }),
+                entries: List()
+            });
+            const nextState = next(state);
+
+            expect(nextState).to.equal(Map({
+                winner: "Trainspotting"
+            }));
+        });
     });
 
     // action "vote"
@@ -102,6 +165,4 @@ describe("application logic", function(){
             }));
         });
     });
-
-    // tree state - moving to the next pair
 });
