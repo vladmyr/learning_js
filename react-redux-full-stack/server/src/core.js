@@ -1,7 +1,7 @@
 import {List, Map} from "immutable";
 
 /**
- * Get the winner of the vote or return both entries in case votes are equal
+ * Inner function. Get the winner of the vote or return both entries in case votes are equal
  * @param   {Immutable.Map} vote
  * @returns {Array<String>}
  */
@@ -22,6 +22,9 @@ let getWinners = function(vote){
         return [a, b];
     }
 };
+
+/** Initial state */
+export const INITIAL_STATE = Map();
 
 /**
  * Set entries
