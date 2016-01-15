@@ -1,5 +1,5 @@
 /**
- * - Module design pattern is JS "class".
+ * - Revealing module design pattern is JS "class".
  * - Pattern provides encapsulation,
  * - Modules should be Immediately-Invoked-Function-Expression
  */
