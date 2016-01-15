@@ -28,14 +28,6 @@ TeslaCar.prototype = function(){
     BROKEN: "Car is broken..."
   };
 
-  var isNotBroken = function(resolve){
-    if(this.isBroken){
-      return console.log(this.make, MESSAGE.BROKEN)
-    } else {
-      return resolve;
-    }
-  };
-
   var startEngine = function(){
     if(this.isBroken){
       console.log(this.make, MESSAGE.BROKEN)
