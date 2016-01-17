@@ -12,10 +12,6 @@ var TeslaCar = function(make){
   this.breakFactor = 3;
 };
 
-var Temp = function(){
-
-};
-
 TeslaCar.prototype = function(){
   const MESSAGE = {
     STARTED: "Engine is already started",
@@ -87,7 +83,6 @@ TeslaCar.prototype = function(){
 
 var modelS = new TeslaCar("Model S");
 var modelX = new TeslaCar("Model X");
-var temp = new Temp();
 
 modelS.startEngine();
 modelS.pressGasPedal();
