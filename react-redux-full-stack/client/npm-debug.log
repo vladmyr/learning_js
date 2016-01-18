@@ -1,42 +1,43 @@
 0 info it worked if it ends with ok
 1 verbose cli [ 'C:\\Programs\\nodejs\\node.exe',
-1 verbose cli   'C:\\Users\\vladmyr\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'C:\\Users\\Admin\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
 1 verbose cli   'run',
 1 verbose cli   'test' ]
-2 info using npm@3.3.9
-3 info using node@v4.2.1
+2 info using npm@3.3.12
+3 info using node@v4.0.0
 4 verbose run-script [ 'pretest', 'test', 'posttest' ]
 5 info lifecycle client@1.0.0~pretest: client@1.0.0
 6 silly lifecycle client@1.0.0~pretest: no script for pretest, continuing
 7 info lifecycle client@1.0.0~test: client@1.0.0
 8 verbose lifecycle client@1.0.0~test: unsafe-perm in lifecycle true
-9 verbose lifecycle client@1.0.0~test: PATH: C:\Users\vladmyr\AppData\Roaming\npm\node_modules\npm\bin\node-gyp-bin;C:\dev\js\react-redux-full-stack\client\node_modules\.bin;C:\Users\vladmyr\.babun\cygwin\home\vladmyr\.local\bin;C:\Users\vladmyr\.babun\cygwin\usr\local\bin;C:\Users\vladmyr\.babun\cygwin\usr\local\bin;C:\Users\vladmyr\.babun\cygwin\bin;C:\Users\vladmyr\.babun\cygwin\home\vladmyr\.local\bin;C:\Programs\7-Zip;C:\mongodb\server\3.2\bin;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\Mozilla Firefox;C:\Programs\Sublime Text 3;C:\Programs\ImageMagick-6.9.1-Q16;C:\Ruby200-x64\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files\Microsoft\Web Platform Installer;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit;C:\Program Files\Microsoft SQL Server\110\Tools\Binn;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.7;C:\Program Files\Microsoft SQL Server\120\Tools\Binn;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm;C:\Program Files\MySQL\MySQL Server 5.6\bin;C:\Program Files (x86)\MySQL\MySQL Utilities;C:\Program Files (x86)\MySQL\MySQL Utilities\Doctrine extensions for PHP;C:\Programs\Git\cmd;C:\Programs\Git\mingw64\bin;C:\Programs\Git\usr\bin;C:\Programs\nodejs;C:\Programs\Vagrant\bin;C:\Program Files (x86)\Skype\Phone;C:\Users\vladmyr\.babun;C:\Users\vladmyr\AppData\Local\atom\bin;C:\Users\vladmyr\AppData\Roaming\npm
-10 verbose lifecycle client@1.0.0~test: CWD: C:\dev\js\react-redux-full-stack\client
+9 verbose lifecycle client@1.0.0~test: PATH: C:\Users\Admin\AppData\Roaming\npm\node_modules\npm\bin\node-gyp-bin;C:\dev\js\learning_js\react-redux-full-stack\client\node_modules\.bin;C:\Users\Admin\.babun\cygwin\home\Admin\.local\bin;C:\Users\Admin\.babun\cygwin\usr\local\bin;C:\Users\Admin\.babun\cygwin\home\Admin\.local\bin;C:\Users\Admin\.babun\cygwin\usr\local\bin;C:\Users\Admin\.babun\cygwin\bin;C:\Programs\7-Zip;C:\Program Files\Nightly;C:\Programs (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\python27;C:\Programs\Sublime Text 2;C:\Programs\ImageMagick;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Programs\nodejs;C:\Programs\Git\cmd;C:\Programs\Git\mingw64\bin;C:\Programs\Git\usr\bin;C:\Programs (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\Windows\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit;C:\Programs\nodejs_0.10.32;C:\Program Files (x86)\Skype\Phone;C:\Ruby200\bin;C:\Users\Admin\AppData\Roaming\npm;C:\Users\Admin\.babun;C:\Programs\Sublime Text 2;C:\Users\Admin\AppData\Local\atom\bin
+10 verbose lifecycle client@1.0.0~test: CWD: C:\dev\js\learning_js\react-redux-full-stack\client
 11 silly lifecycle client@1.0.0~test: Args: [ '/d /s /c',
 11 silly lifecycle   'mocha --compilers js:babel-core/register --require ./test/test_helper.js "test/**/*.@(js|jsx)"' ]
 12 silly lifecycle client@1.0.0~test: Returned: code: 1  signal: null
 13 info lifecycle client@1.0.0~test: Failed to exec test script
 14 verbose stack Error: client@1.0.0 test: `mocha --compilers js:babel-core/register --require ./test/test_helper.js "test/**/*.@(js|jsx)"`
 14 verbose stack Exit status 1
-14 verbose stack     at EventEmitter.<anonymous> (C:\Users\vladmyr\AppData\Roaming\npm\node_modules\npm\lib\utils\lifecycle.js:233:16)
+14 verbose stack     at EventEmitter.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\npm\lib\utils\lifecycle.js:232:16)
 14 verbose stack     at emitTwo (events.js:87:13)
 14 verbose stack     at EventEmitter.emit (events.js:172:7)
-14 verbose stack     at ChildProcess.<anonymous> (C:\Users\vladmyr\AppData\Roaming\npm\node_modules\npm\lib\utils\spawn.js:24:14)
+14 verbose stack     at ChildProcess.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\npm\lib\utils\spawn.js:24:14)
 14 verbose stack     at emitTwo (events.js:87:13)
 14 verbose stack     at ChildProcess.emit (events.js:172:7)
-14 verbose stack     at maybeClose (internal/child_process.js:818:16)
+14 verbose stack     at maybeClose (internal/child_process.js:817:16)
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
 15 verbose pkgid client@1.0.0
-16 verbose cwd C:\dev\js\react-redux-full-stack\client
-17 error Windows_NT 6.1.7601
-18 error argv "C:\\Programs\\nodejs\\node.exe" "C:\\Users\\vladmyr\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "run" "test"
-19 error node v4.2.1
-20 error npm  v3.3.9
+16 verbose cwd C:\dev\js\learning_js\react-redux-full-stack\client
+17 error Windows_NT 6.3.9600
+18 error argv "C:\\Programs\\nodejs\\node.exe" "C:\\Users\\Admin\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "run" "test"
+19 error node v4.0.0
+20 error npm  v3.3.12
 21 error code ELIFECYCLE
 22 error client@1.0.0 test: `mocha --compilers js:babel-core/register --require ./test/test_helper.js "test/**/*.@(js|jsx)"`
 22 error Exit status 1
 23 error Failed at the client@1.0.0 test script 'mocha --compilers js:babel-core/register --require ./test/test_helper.js "test/**/*.@(js|jsx)"'.
-23 error This is most likely a problem with the client package,
+23 error Make sure you have the latest version of node.js and npm installed.
+23 error If you do, this is most likely a problem with the client package,
 23 error not with npm itself.
 23 error Tell the author that this fails on your system:
 23 error     mocha --compilers js:babel-core/register --require ./test/test_helper.js "test/**/*.@(js|jsx)"
