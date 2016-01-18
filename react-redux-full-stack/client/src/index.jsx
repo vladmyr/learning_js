@@ -1,30 +1,32 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Router, {Route} from "react-router";
-import {createStore} from "redux";
+import {createStore, applyMiddleware} from "redux";
 import {Provider} from "react-redux";
+import io from "socket.io-client";
+
 import reducer from "./reducer";
 import App from "./components/App";
-import Voting from "./components/Voting";
-import Results from "./components/Results";
+import {VotingContainer} from "./components/Voting";
+import {ResultsContainer} from "./components/Results";
+import {setState} from "./action_creators";
+import remoteActionMiddleware from "./remote_action_middleware"
 
-const store = createSore(reducer);
-store.dispatch({
-    type: "SET_STATE",
-    state: {
-        vote: {
-            pair: ["Trainspotting", "28 Days Later"],
-            tally: {
-                Sunshine: 2
-            }
-        }
-    }
+const socket = io(`${location.protocol}//${location.hostname}:8090`);
+socket.on("state", (state) => {
+    store.dispatch(setState(state));
 });
+
+// attack middleware to the store
+const createStoreWithMiddleware = applyMiddleware(
+    remoteActionMiddleware(socket)
+)(createStore);
+const store = createStoreWithMiddleware(reducer);
 
 // router & routes
 const routes = <Route component={App}>
-  <Route path="/results" component={Results} />
-  <Route path="/" component={Voting} />
+  <Route path="/results" component={ResultsContainer} />
+  <Route path="/" component={VotingContainer} />
 </Route>;
 
 ReactDOM.render(
